@@ -1,0 +1,105 @@
+/* teacher_homework.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f5f7fa 60%, #eaeaff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+main {
+    max-width: 950px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px rgba(78,84,200,0.07);
+    padding: 32px 24px;
+}
+h2 {
+    color: #4e54c8;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.marks-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 18px;
+    background: #f7f8fa;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(78,84,200,0.06);
+    table-layout: fixed;
+}
+.marks-table th,
+.marks-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e0e4f6;
+    border-right: 1px solid #e0e4f6;
+    font-size: 1em;
+    text-align: center;
+    word-break: break-word;
+    min-width: 110px;
+}
+.marks-table th:last-child,
+.marks-table td:last-child {
+    border-right: none;
+}
+.marks-table th {
+    background: #fff;
+    color: #4e54c8;
+    font-weight: 600;
+    font-size: 1.07em;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-bottom: 2px solid #bfc6e6;
+}
+.marks-table td {
+    color: #222;
+    vertical-align: middle;
+    background: #f7f8fa;
+}
+.marks-table th:nth-child(5),
+.marks-table td:nth-child(5) {
+    min-width: 180px;
+}
+.marks-table th:nth-child(6),
+.marks-table td:nth-child(6) {
+    min-width: 120px;
+}
+.marks-table th:nth-child(7),
+.marks-table td:nth-child(7) {
+    min-width: 120px;
+}
+.marks-table tr:last-child td {
+    border-bottom: none;
+}
+.marks-table tr:hover td {
+    background: #eaeaff;
+}
+.attach-btn {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    font-size: 0.95em;
+    padding: 4px 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+.attach-btn:hover {
+    background: #8f94fb;
+}
+.download-link {
+    margin-left: 0;
+    color: #4e54c8;
+    font-size: 0.95em;
+    text-decoration: underline;
+    white-space: nowrap;
+}

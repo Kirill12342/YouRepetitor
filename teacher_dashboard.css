@@ -1,0 +1,480 @@
+/* teacher_dashboard.css и diary.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f5f7fa 60%, #eaeaff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+.diary-header, .teacher-header {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    padding: 18px 24px;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(78,84,200,0.04);
+}
+
+.diary-header .logo, .teacher-header .logo {
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.profile-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s, color 0.2s;
+}
+.profile-btn a:hover {
+    background: #fff;
+    color: #4e54c8;
+}
+
+.main-action-btn {
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.main-action-btn:hover {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+}
+
+.modal-bg {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-window {
+    background: #fff;
+    border-radius: 14px;
+    padding: 32px 28px 24px 28px;
+    min-width: 320px;
+    box-shadow: 0 4px 24px rgba(78,84,200,0.15);
+    position: relative;
+}
+.modal-window h3 {
+    margin-top: 0;
+    color: #4e54c8;
+    text-align: center;
+}
+.close-modal {
+    margin-top: 18px;
+    background: #eee;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 18px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.close-modal:hover {
+    background: #eaeaff;
+}
+
+/* Вернули стандартные отступы для main */
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(78,84,200,0.07);
+    padding: 32px 24px;
+}
+
+h2 {
+    color: #4e54c8;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.create-class-form,
+.add-student-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.create-class-form input,
+.add-student-form input,
+.add-student-form select {
+    padding: 8px 12px;
+    border: 1.5px solid #e0e4f6;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f7f8fa;
+    transition: border 0.2s;
+    min-width: 180px;
+}
+
+.create-class-form input:focus,
+.add-student-form input:focus,
+.add-student-form select:focus {
+    border: 1.5px solid #4e54c8;
+    outline: none;
+}
+
+.create-class-form button,
+.add-student-form button {
+    padding: 8px 18px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.create-class-form button:hover,
+.add-student-form button:hover {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+}
+
+.class-section {
+    margin-bottom: 32px;
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 18px 16px;
+    box-shadow: 0 1px 4px rgba(78,84,200,0.05);
+}
+.class-section h3 {
+    margin-top: 0;
+    color: #4e54c8;
+    font-size: 1.1em;
+}
+.class-section ul {
+    padding-left: 18px;
+    margin: 0;
+}
+.class-section li {
+    margin-bottom: 4px;
+}
+
+.msg {
+    margin: 18px auto;
+    color: #4e54c8;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.08em;
+    background: #eaeaff;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 1px 4px rgba(78,84,200,0.05);
+    max-width: 350px;
+}
+
+.marks-section, .schedule-section, .homework-section {
+    margin-bottom: 32px;
+}
+
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px;
+}
+.marks-table th, .marks-table td {
+    border: 1px solid #e0e4f6;
+    padding: 8px 10px;
+    text-align: center;
+}
+.marks-table th {
+    background: #eaeaff;
+    color: #4e54c8;
+}
+
+.schedule-list, .homework-list {
+    padding-left: 18px;
+    margin: 0;
+}
+.schedule-list li, .homework-list li {
+    margin-bottom: 4px;
+}
+
+.schedule-table, .marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 18px;
+}
+.schedule-table th, .schedule-table td,
+.marks-table th, .marks-table td {
+    border: 1px solid #e0e4f6;
+    padding: 8px 10px;
+    text-align: center;
+}
+.schedule-table th, .marks-table th {
+    background: #eaeaff;
+    color: #4e54c8;
+}
+
+
+
+/* --- Расписание недели --- */
+.schedule-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 18px;
+    justify-content: stretch;
+    overflow-x: auto;
+    margin-bottom: 32px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 18px;
+    background: #f0f2fa; /* светлый фон для контраста */
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-top: 2px solid #bfc6e6;
+    border-bottom: 2px solid #bfc6e6;
+}
+
+.schedule-day {
+    background: #fff;
+    border-radius: 16px;
+    padding: 14px 10px 10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 16px rgba(78,84,200,0.10), 0 0 0 2px #bfc6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    border: 2px solid #bfc6e6;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+.schedule-day strong {
+    color: #4e54c8;
+    font-size: 1.13em;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: block;
+    background: #eaeaff;
+    border-radius: 8px;
+    padding: 6px 0 4px 0;
+    border-bottom: 2px solid #bfc6e6;
+    box-shadow: 0 2px 8px rgba(78,84,200,0.04);
+}
+
+.schedule-day ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.schedule-day li {
+    margin-bottom: 12px;
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 10px 8px 8px 8px;
+    box-shadow: 0 1px 6px rgba(78,84,200,0.09);
+    border: 1.5px solid #d1d7f7;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 1em;
+    transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+}
+.schedule-day li:last-child {
+    margin-bottom: 0;
+}
+.schedule-day li:hover {
+    box-shadow: 0 2px 16px rgba(78,84,200,0.18);
+    border: 1.5px solid #4e54c8;
+    background: #eaeaff;
+}
+
+.lesson-header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+}
+.lesson-time {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+    background: #4e54c8;
+    border-radius: 6px;
+    padding: 2px 10px;
+    margin-right: 2px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 4px rgba(78,84,200,0.10);
+}
+.lesson-subject {
+    font-weight: 600;
+    color: #222;
+}
+.lesson-student {
+    color: #4e54c8;
+    font-size: 0.98em;
+    font-weight: 500;
+}
+.lesson-comment {
+    color: #888;
+    font-size: 0.97em;
+    margin-left: 2px;
+    margin-top: 2px;
+    font-style: italic;
+}
+.lesson-link-btn, .schedule-day form button {
+    font-size: 0.97em;
+    padding: 4px 12px;
+    margin-top: 4px;
+    margin-right: 6px;
+}
+.lesson-link-btn {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+    border: none;
+    transition: background 0.2s;
+    font-weight: 500;
+}
+.lesson-link-btn:hover {
+    background: #8f94fb;
+    color: #fff;
+}
+.schedule-day form button {
+    background: #fff;
+    color: #d32f2f;
+    border: 2px solid #d32f2f;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    font-weight: 600;
+}
+.schedule-day form button:hover {
+    background: #ffeaea;
+    color: #a00;
+    border: 2px solid #a00;
+}
+
+/* Кнопки навигации по неделям */
+.schedule-week-nav {
+    margin-bottom: 18px;
+}
+.schedule-week-nav button {
+    padding: 7px 18px;
+    background: #eaeaff;
+    color: #4e54c8;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 0 4px;
+}
+.schedule-week-nav button:hover {
+    background: #4e54c8;
+    color: #fff;
+}
+
+.modal-bg {
+    position: fixed; left: 0; top: 0; width: 100vw; height: 100vh;
+    background: rgba(60,70,120,0.18); z-index: 1000; display: flex; align-items: center; justify-content: center;
+}
+.modal-window {
+    background: #fff; border-radius: 14px; box-shadow: 0 4px 32px rgba(78,84,200,0.13);
+    padding: 32px 28px 22px 28px; min-width: 320px; max-width: 96vw;
+    text-align: center;
+}
+.modal-window h3 { margin-top: 0; color: #4e54c8; }
+.modal-window input, .modal-window select {
+    width: 90%; margin: 6px 0 12px 0; padding: 6px 8px; border-radius: 6px; border: 1.5px solid #e0e4f6;
+}
+
+.delete-btn {
+    background: #ff4e4e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 0.97em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.delete-btn:hover {
+    background: #c82333;
+}
+
+
+
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .schedule-week {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+}
+@media (max-width: 900px) {
+    main {
+        max-width: 100vw;
+        margin: 0;
+        padding: 12px 0;
+        border-radius: 0;
+    }
+    .schedule-week {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 4px;
+    }
+}
+@media (max-width: 700px) {
+    main {
+        max-width: 100vw;
+        margin: 0;
+        padding: 8px 0 0 0;
+        border-radius: 0;
+    }
+    .diary-header, .teacher-header {
+        font-size: 1em;
+        padding: 12px 8px;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .schedule-week {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 0 2vw;
+    }
+    .schedule-day {
+        min-width: 0;
+        max-width: 100vw;
+    }
+}
+
+/* ...остальной CSS ниже... */

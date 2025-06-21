@@ -1,0 +1,203 @@
+/* student_dashboard.css — стили для страницы студента в единой гамме с учителем */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f5f7fa 60%, #eaeaff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+.profile-btn {
+    text-align: right;
+    margin: 18px 24px 0 0;
+}
+.profile-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    transition: background 0.2s, color 0.2s;
+}
+.profile-btn a:hover {
+    background: #fff;
+    color: #4e54c8;
+}
+
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(78,84,200,0.07);
+    padding: 32px 24px;
+}
+
+h2 {
+    color: #4e54c8;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* --- Расписание недели --- */
+.schedule-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 18px;
+    justify-content: stretch;
+    overflow-x: auto;
+    margin-bottom: 32px;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 18px;
+    background: #f0f2fa;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-top: 2px solid #bfc6e6;
+    border-bottom: 2px solid #bfc6e6;
+}
+
+.schedule-day {
+    background: #fff;
+    border-radius: 16px;
+    padding: 14px 10px 10px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 16px rgba(78,84,200,0.10), 0 0 0 2px #bfc6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    border: 2px solid #bfc6e6;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+.schedule-day strong {
+    color: #4e54c8;
+    font-size: 1.13em;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: block;
+    background: #eaeaff;
+    border-radius: 8px;
+    padding: 6px 0 4px 0;
+    border-bottom: 2px solid #bfc6e6;
+    box-shadow: 0 2px 8px rgba(78,84,200,0.04);
+}
+
+.schedule-day ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.schedule-day li {
+    margin-bottom: 12px;
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 10px 8px 8px 8px;
+    box-shadow: 0 1px 6px rgba(78,84,200,0.09);
+    border: 1.5px solid #d1d7f7;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 1em;
+    transition: box-shadow 0.2s, border 0.2s, background 0.2s;
+}
+.schedule-day li:last-child {
+    margin-bottom: 0;
+}
+.schedule-day li:hover {
+    box-shadow: 0 2px 16px rgba(78,84,200,0.18);
+    border: 1.5px solid #4e54c8;
+    background: #eaeaff;
+}
+
+.lesson-header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+}
+.lesson-time {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+    background: #4e54c8;
+    border-radius: 6px;
+    padding: 2px 10px;
+    margin-right: 2px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 4px rgba(78,84,200,0.10);
+}
+.lesson-subject {
+    font-weight: 600;
+    color: #222;
+}
+.lesson-link-btn {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+    border: none;
+    transition: background 0.2s;
+    font-weight: 500;
+    font-size: 0.97em;
+    padding: 4px 12px;
+    margin-top: 4px;
+    margin-right: 6px;
+}
+.lesson-link-btn:hover {
+    background: #8f94fb;
+    color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .schedule-week {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+}
+@media (max-width: 900px) {
+    main {
+        max-width: 100vw;
+        margin: 0;
+        padding: 12px 0;
+        border-radius: 0;
+    }
+    .schedule-week {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 4px;
+    }
+}
+@media (max-width: 700px) {
+    main {
+        max-width: 100vw;
+        margin: 0;
+        padding: 8px 0 0 0;
+        border-radius: 0;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    .schedule-week {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 0 2vw;
+    }
+    .schedule-day {
+        min-width: 0;
+        max-width: 100vw;
+    }
+}

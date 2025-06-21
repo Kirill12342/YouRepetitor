@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #4e54c8 0%, #8f94fb 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: #fff;
+    color: #333;
+    padding: 38px 32px 32px 32px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(78,84,200,0.13);
+    max-width: 370px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.login-container h2 {
+    color: #4e54c8;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f7f8fa;
+    transition: border 0.2s;
+}
+
+.login-container input:focus {
+    border: 1.5px solid #4e54c8;
+    outline: none;
+}
+
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 10px;
+}
+
+.login-container button[type="submit"]:hover {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+}
+
+.login-container .back-btn {
+    display: inline-block;
+    margin-top: 8px;
+    color: #4e54c8;
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.login-container .back-btn:hover {
+    color: #8f94fb;
+}
+
+.login-container .msg {
+    margin-top: 12px;
+    color: #c84e54;
+    font-weight: 500;
+}

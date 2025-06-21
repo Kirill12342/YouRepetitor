@@ -1,0 +1,130 @@
+/* lesson.css — оформление страницы отдельного урока */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f5f7fa 60%, #eaeaff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+.lesson-main {
+    max-width: 480px;
+    margin: 48px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(78,84,200,0.10);
+    padding: 36px 28px 28px 28px;
+    position: relative;
+}
+
+h2 {
+    color: #4e54c8;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.lesson-info {
+    background: #f7f8fa;
+    border-radius: 10px;
+    padding: 18px 16px 14px 16px;
+    margin-bottom: 22px;
+    box-shadow: 0 1px 6px rgba(78,84,200,0.06);
+    font-size: 1.04em;
+    line-height: 1.7;
+}
+.lesson-info b {
+    color: #4e54c8;
+    font-weight: 600;
+}
+
+.msg {
+    margin: 18px auto 20px auto;
+    color: #4e54c8;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.08em;
+    background: #eaeaff;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 1px 4px rgba(78,84,200,0.05);
+    max-width: 350px;
+}
+
+.lesson-form {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.lesson-form label {
+    font-weight: 600;
+    color: #4e54c8;
+    margin-right: 6px;
+}
+.lesson-form input[type="number"],
+.lesson-form input[type="text"] {
+    padding: 7px 12px;
+    border: 1.5px solid #e0e4f6;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f7f8fa;
+    transition: border 0.2s;
+}
+.lesson-form input[type="number"]:focus,
+.lesson-form input[type="text"]:focus {
+    border: 1.5px solid #4e54c8;
+    outline: none;
+}
+.lesson-form button {
+    padding: 8px 18px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.lesson-form button:hover {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+}
+
+.back-btn {
+    margin-top: 18px;
+    padding: 8px 22px;
+    background: #eaeaff;
+    color: #4e54c8;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.back-btn:hover {
+    background: #4e54c8;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .lesson-main {
+        max-width: 98vw;
+        margin: 18px 1vw;
+        padding: 18px 4vw;
+    }
+    .lesson-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+}

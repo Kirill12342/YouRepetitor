@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f5f7fa 60%, #eaeaff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+.profile-header {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    padding: 18px 24px;
+    font-size: 1.2em;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    box-shadow: 0 2px 8px rgba(78,84,200,0.04);
+}
+
+.profile-header a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.profile-header a:hover {
+    color: #ffb347;
+}
+
+main {
+    max-width: 400px;
+    margin: 48px auto 0 auto;
+    background: rgba(255,255,255,0.97);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(78,84,200,0.10);
+    padding: 36px 28px 28px 28px;
+    position: relative;
+}
+
+h2 {
+    color: #4e54c8;
+    margin-top: 0;
+    margin-bottom: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 18px;
+    color: #4e54c8;
+    font-weight: 500;
+    font-size: 1em;
+    text-align: left;
+}
+.profile-form label:first-child {
+    margin-top: 0;
+}
+
+.profile-form input[type="email"],
+.profile-form input[type="text"],
+.profile-form input[type="password"] {
+    width: 92%;
+    max-width: 270px;
+    display: block;
+    margin: 0 auto 14px auto;
+    padding: 8px 12px;
+    border: 1.5px solid #e0e4f6;
+    border-radius: 10px;
+    font-size: 1em;
+    background: #f7f8fa;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px rgba(78,84,200,0.03);
+}
+
+.profile-form input:focus {
+    border: 1.5px solid #4e54c8;
+    outline: none;
+    box-shadow: 0 0 0 2px #eaeaff;
+}
+
+.profile-form button[type="submit"] {
+    width: 92%;
+    max-width: 270px;
+    display: block;
+    margin: 18px auto 0 auto;
+    padding: 11px;
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.08em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(78,84,200,0.07);
+}
+
+.profile-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+    box-shadow: 0 4px 16px rgba(78,84,200,0.13);
+}
+
+.logout-btn {
+    width: 92%;
+    max-width: 270px;
+    display: block;
+    margin: 22px auto 0 auto;
+    padding: 11px;
+    background: linear-gradient(90deg, #c84e54 0%, #ffb347 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.08em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(200,78,84,0.07);
+}
+
+.logout-btn:hover {
+    background: linear-gradient(90deg, #ffb347 0%, #c84e54 100%);
+    box-shadow: 0 4px 16px rgba(200,78,84,0.13);
+}
+
+.back-btn {
+    display: block;
+    margin: 18px auto 0 auto;
+    color: #4e54c8;
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #8f94fb;
+}
+
+.msg {
+    margin-top: 16px;
+    color: #4e54c8;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.08em;
+    background: #eaeaff;
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 1px 4px rgba(78,84,200,0.05);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    main {
+        max-width: 98vw;
+        margin: 18px 1vw;
+        padding: 18px 4vw;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    .profile-form input[type="email"],
+    .profile-form input[type="text"],
+    .profile-form input[type="password"],
+    .profile-form button[type="submit"],
+    .logout-btn {
+        max-width: 98vw;
+        width: 100%;
+    }
+}

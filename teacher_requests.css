@@ -1,0 +1,93 @@
+/* teacher_requests.css — современный дизайн для карточек заявок */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f5f7fa 60%, #eaeaff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 2px 18px rgba(78,84,200,0.10);
+    padding: 36px 32px;
+}
+
+h2 {
+    color: #4e54c8;
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.requests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: flex-start;
+    margin-top: 24px;
+}
+
+.request-card {
+    background: linear-gradient(120deg, #eaeaff 60%, #f7f8fa 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(78,84,200,0.10);
+    padding: 26px 28px 20px 28px;
+    min-width: 290px;
+    max-width: 340px;
+    font-size: 1.08em;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1.5px solid #d6d8f6;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+}
+
+.request-card:hover {
+    box-shadow: 0 8px 32px rgba(78,84,200,0.18);
+    transform: translateY(-4px) scale(1.02);
+    border-color: #8f94fb;
+}
+
+.request-card b {
+    color: #4e54c8;
+    font-weight: 600;
+}
+
+.request-date {
+    color: #888;
+    font-size: 0.97em;
+    margin-top: 10px;
+    text-align: right;
+    letter-spacing: 0.5px;
+}
+
+
+
+@media (max-width: 1200px) {
+    main {
+        max-width: 100vw;
+        margin: 0;
+        padding: 12px 0 0 0;
+        border-radius: 0;
+    }
+    .requests-list {
+        gap: 14px;
+        justify-content: center;
+    }
+    .request-card {
+        min-width: 220px;
+        max-width: 98vw;
+        padding: 16px 10px 14px 10px;
+        font-size: 1em;
+    }
+}
